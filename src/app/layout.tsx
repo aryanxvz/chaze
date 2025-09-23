@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function RootLayout({children}: Readonly<{children: React.ReactNode}>) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
-      <body className="antialiased bg-[#fafafa] dark:bg-[#0a0a0a] transition-all duration-300">
+      <body className="antialiased bg-[#fafafa] dark:bg-[#0a0a0a] transition-colors duration-300">
         <ThemeProvider attribute="class" enableSystem defaultTheme="system">
           {children}
         </ThemeProvider>
