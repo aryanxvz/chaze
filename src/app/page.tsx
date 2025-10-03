@@ -5,6 +5,7 @@ import Navbar from "@/components/sections/navbar";
 // import Github from "@/components/icons/github";
 // import Github2 from "@/components/icons/github2";
 import SocialLinks from "@/components/sections/socials";
+import Experience from "@/components/sections/experience";
 
 export default function Home() {
   return (
@@ -23,6 +24,10 @@ export default function Home() {
       <Divider />
       <div className="max-w-4xl w-full mx-auto space-y-4 border-x border-neutral-300 dark:border-neutral-800 p-8">
         <SocialLinks />
+      </div>
+      <Divider />
+      <div className="max-w-4xl w-full mx-auto space-y-4 border-x border-neutral-300 dark:border-neutral-800 p-8">
+        <Experience />
       </div>
       <Divider />
     </main>
