@@ -41,7 +41,7 @@ const SocialLinks = () => {
             <a key={index} href={link.url} target="_blank" rel="noopener noreferrer"
               className="bg-[#fafafa] dark:bg-[#0a0a0a] border border-neutral-300 dark:border-neutral-700 hover:border-neutral-400 dark:hover:border-neutral-600 px-2 py-4 flex items-center justify-center transition-all duration-200 cursor-pointer"
             >
-              <div className={`w-12 h-12 rounded-xl flex items-center justify-center relative p-[0.5px] bg-gradient-to-br from-white via-black to-white dark:from-white/60 dark:via-neutral-600 dark:to-white/60`}>
+              <div className={`w-12 h-12 rounded-xl flex items-center justify-center relative p-[0.5px] bg-gradient-to-br from-white via-neutral-300/60 to-white dark:from-white/60 dark:via-neutral-600 dark:to-white/60`}>
                 <div className={`w-full h-full ${link.bgColor} rounded-xl flex items-center justify-center overflow-hidden`}>
                   <Image 
                     src={link.imagePath} alt={`${link.name} icon`}
@@ -62,7 +62,7 @@ const SocialLinks = () => {
                 className="bg-[#fafafa] dark:bg-[#0a0a0a] border border-neutral-300 dark:border-neutral-700 hover:border-neutral-400 dark:hover:border-neutral-600 p-5 flex items-center justify-between transition-all duration-200 cursor-pointer group"
               >
                 <div className="flex items-center space-x-4">
-                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center relative p-[0.5px] bg-gradient-to-br from-white via-black to-white dark:from-white/60 dark:via-neutral-600 dark:to-white/60`}>
+                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center relative p-[0.5px] bg-gradient-to-br from-white via-neutral-300/40 to-white dark:from-white/60 dark:via-neutral-600 dark:to-white/60`}>
                     <div className={`w-full h-full ${link.bgColor} rounded-xl flex items-center justify-center overflow-hidden`}>
                       <Image 
                         src={link.imagePath} alt={`${link.name} icon`}
@@ -93,7 +93,7 @@ const SocialLinks = () => {
                 className="bg-[#fafafa] dark:bg-[#0a0a0a] border border-neutral-300 dark:border-neutral-700 hover:border-neutral-400 dark:hover:border-neutral-600 p-5 flex items-center justify-between transition-all duration-200 cursor-pointer group"
               >
                 <div className="flex items-center space-x-4">
-                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center relative p-[0.5px] bg-gradient-to-br from-white via-black to-white dark:from-white/60 dark:via-neutral-900 dark:to-white/60`}>
+                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center relative p-[0.5px] bg-gradient-to-br from-white via-neutral-300/40 to-white dark:from-white/60 dark:via-neutral-900 dark:to-white/60`}>
                     <div className={`w-full h-full ${link.bgColor} rounded-xl flex items-center justify-center overflow-hidden`}>
                       <Image 
                         src={link.imagePath} alt={`${link.name} icon`}
