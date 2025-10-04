@@ -54,16 +54,24 @@ export default function GitHubContributions({ username = 'your-username' }) {
               light: ['#ebedf0', '#c6d9f7', '#9bbff0', '#6a9de8', '#3b82f6'],
               dark: ['#161b22', '#0e3a6e', '#1e5a9e', '#2b7cd3', '#3b9eff'],
             }}
-            renderBlock={(block, activity) => (
-              <rect
-                x={block.props.x} y={block.props.y}
-                width={block.props.width} height={block.props.height}
-                rx={block.props.rx} ry={block.props.ry}
-                fill={block.props.fill}
-                data-tooltip-id="github-tooltip"
-                data-tooltip-html={`<strong>${activity.count} contributions</strong> on ${activity.date}`}
-              />
-            )}
+            renderBlock={(block, activity) => {
+              const formattedDate = new Date(activity.date).toLocaleDateString('en-GB', {
+                day: '2-digit',
+                month: '2-digit',
+                year: 'numeric'
+              }).replace(/\//g, '-')
+              
+              return (
+                <rect
+                  x={block.props.x} y={block.props.y}
+                  width={block.props.width} height={block.props.height}
+                  rx={block.props.rx} ry={block.props.ry}
+                  fill={block.props.fill}
+                  data-tooltip-id="github-tooltip"
+                  data-tooltip-html={`<strong>${activity.count} contributions</strong> on ${formattedDate}`}
+                />
+              )
+            }}
           />
         </div>
       </div>
