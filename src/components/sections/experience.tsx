@@ -41,8 +41,8 @@ const WORK_EXPERIENCE: ExperienceItemType[] = [
   {
     id: "skidoo",
     companyName: "Skidoo",
-    companyLogo: "/icons/skidoo.jpeg",
-    companyWebsite: "https://skidoo.com", // Add your actual URL
+    companyLogo: "/icons/theskidoo.jpeg",
+    companyWebsite: "https://theskidoo.com/posts",
     positions: [
       {
         id: "30d3a9fb-021d-452a-9d27-83655369b4b9",
@@ -76,7 +76,9 @@ const WORK_EXPERIENCE: ExperienceItemType[] = [
 export default function Experience() {
   return (
     <section>
-      <div className="text-3xl sm:text-4xl font-bold">Experience</div>
+      <div className="text-3xl sm:text-4xl font-bold pl-2 sm:pl-0">
+        <h2>Experience</h2>
+      </div>
       <WorkExperience experiences={WORK_EXPERIENCE} />
     </section>
   )

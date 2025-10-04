@@ -50,7 +50,7 @@ export type ExperienceItemType = {
 
 export function WorkExperience({className, experiences}: {className?: string; experiences: ExperienceItemType[]}) {
   return (
-    <div className={cn("pr-1", className)}>
+    <div className={cn("pt-0 sm:pt-2", className)}>
       {experiences.map((experience) => (
         <ExperienceItem key={experience.id} experience={experience} />
       ))}
@@ -61,16 +61,14 @@ export function WorkExperience({className, experiences}: {className?: string; ex
 export function ExperienceItem({experience}: {experience: ExperienceItemType}) {
   return (
     <Collapsible defaultOpen={experience.positions[0]?.isExpanded} asChild>
-      <div className="space-t-4 my-3 py-3 px-4 sm:my-7 hover:bg-neutral-200/30 dark:hover:bg-neutral-900 rounded-lg transition-colors">
+      <div className="mt-4 pt-2 sm:mt-4 hover:bg-neutral-200/30 dark:hover:bg-neutral-900 rounded-lg transition-colors">
         <CollapsibleTrigger className="group/experience not-prose w-full text-left select-none">
-          <div className="flex items-center gap-2 sm:gap-3">
-            <div className="flex size-[48px] sm:size-[60px] shrink-0 items-center justify-center overflow-hidden rounded-lg border bg-muted" aria-hidden>
+          <div className="flex items-center gap-2 sm:gap-3 px-4">
+            <div className="flex size-[48px] sm:size-[60px] shrink-0 items-center justify-center overflow-hidden rounded-full bg-transparent" aria-hidden>
               {experience.companyLogo ? (
-                <Image
+                <Image className="object-cover"
                   src={experience.companyLogo} alt={experience.companyName}
                   width={60} height={60} quality={100}
-                  className="object-cover"
-                  unoptimized
                 />
               ) : (
                 <span className="flex size-3 rounded-full bg-zinc-300 dark:bg-zinc-600" />
@@ -84,14 +82,8 @@ export function ExperienceItem({experience}: {experience: ExperienceItemType}) {
                 </h3>
 
                 {experience.companyWebsite && (
-                  <a
-                    href={experience.companyWebsite}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={(e) => e.stopPropagation()}
-                    className="inline-flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors mb-0.5"
-                    aria-label={`Visit ${experience.companyName} website`}
-                  >
+                  <a href={experience.companyWebsite} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}
+                    className="inline-flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors mb-0.5" aria-label={`Visit ${experience.companyName} website`}>
                     <ExternalLinkIcon className="size-4" />
                   </a>
                 )}
@@ -111,7 +103,7 @@ export function ExperienceItem({experience}: {experience: ExperienceItemType}) {
                     {experience.positions[0].title}
                   </h4>
 
-                  <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 text-xs sm:text-sm text-muted-foreground">
+                  <div className="flex flex-row items-center gap-2 text-xs sm:text-sm text-muted-foreground">
                     {experience.positions[0].employmentType && (
                       <>
                         <dl>
@@ -119,10 +111,7 @@ export function ExperienceItem({experience}: {experience: ExperienceItemType}) {
                           <dd>{experience.positions[0].employmentType}</dd>
                         </dl>
 
-                        <Separator
-                          className="hidden sm:block data-[orientation=vertical]:h-4"
-                          orientation="vertical"
-                        />
+                        <Separator className="hidden sm:block data-[orientation=vertical]:h-4" orientation="vertical"/>
                       </>
                     )}
 
@@ -135,15 +124,15 @@ export function ExperienceItem({experience}: {experience: ExperienceItemType}) {
               )}
             </div>
 
-            <div className="shrink-0 text-muted-foreground [&_svg]:size-5" aria-hidden>
-              <ChevronsDownUpIcon className="hidden group-data-[state=open]/experience:block transition-transform duration-300" />
-              <ChevronsUpDownIcon className="hidden group-data-[state=closed]/experience:block transition-transform duration-300" />
+            <div className="shrink-0 text-muted-foreground [&_svg]:size-4.5 sm:[&_svg]:size-5 sm:pr-4 relative" aria-hidden>
+              <ChevronsDownUpIcon className="absolute inset-0 transition-all duration-500 ease-in-out opacity-0 scale-50 group-data-[state=open]/experience:opacity-100 group-data-[state=open]/experience:scale-100" />
+              <ChevronsUpDownIcon className="transition-all duration-500 ease-in-out opacity-100 scale-100 group-data-[state=open]/experience:opacity-0 group-data-[state=open]/experience:scale-50" />
             </div>
           </div>
         </CollapsibleTrigger>
 
         <CollapsibleContent className="overflow-hidden transition-all duration-500 ease-in-out data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down">
-          <div className="pl-2 sm:pl-4 pt-2 space-y-4 animate-fadeIn">
+          <div className="px-2 sm:px-4 pt-2 space-y-4 text-sm sm:text-base animate-fadeIn">
             {experience.positions.map((position) => (
               <ExperiencePositionItem key={position.id} position={position} />
             ))}
@@ -156,7 +145,7 @@ export function ExperienceItem({experience}: {experience: ExperienceItemType}) {
 
 export function ExperiencePositionItem({position}: {position: ExperiencePositionItemType}) {
   return (
-    <div className="pr-2">
+    <div>
       {position.description && (
         <Prose className="mb-2">
           <ReactMarkdown
@@ -191,9 +180,7 @@ function Prose({ className, ...props }: React.ComponentProps<"div">) {
         "prose prose-sm max-w-none text-foreground prose-zinc dark:prose-invert",
         "prose-a:font-medium prose-a:break-words prose-a:text-foreground prose-a:underline prose-a:underline-offset-4",
         "prose-code:rounded-md prose-code:border prose-code:bg-muted/50 prose-code:px-[0.3rem] prose-code:py-[0.2rem] prose-code:text-sm prose-code:font-normal prose-code:before:content-none prose-code:after:content-none",
-        "prose-ul:list-disc prose-ul:pl-4 prose-li:my-1",
-        className
-      )}
+        "prose-ul:list-disc prose-ul:pl-4 prose-li:my-1", className)}
       {...props}
     />
   )
@@ -203,9 +190,7 @@ function Skill({ className, ...props }: React.ComponentProps<"span">) {
   return (
     <span
       className={cn(
-        "inline-flex items-center rounded-lg border bg-muted/50 px-1.5 py-0.5 text-xs text-muted-foreground transition-colors hover:bg-muted",
-        className
-      )}
+        "inline-flex items-center rounded-lg border bg-muted/50 px-1.5 py-[1px] sm:py-0.5 text-xs text-muted-foreground transition-colors hover:bg-muted", className)}
       {...props}
     />
   )
