@@ -15,10 +15,10 @@ export default function GitHubContributions({ username = 'your-username' }) {
     
     const handleResize = () => {
       const width = window.innerWidth
-      if (width < 640) { // sm breakpoint
-        setBlockSize(8)
-        setBlockMargin(2)
-      } else if (width < 768) { // md breakpoint
+      if (width < 640) {
+        setBlockSize(10)
+        setBlockMargin(3)
+      } else if (width < 768) {
         setBlockSize(10)
         setBlockMargin(3)
       } else {
