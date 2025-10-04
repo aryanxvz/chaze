@@ -6,6 +6,7 @@ import Navbar from "@/components/sections/navbar";
 // import Github2 from "@/components/icons/github2";
 import SocialLinks from "@/components/sections/socials";
 import Experience from "@/components/sections/experience";
+import GitHubContributions from "@/components/github-chart";
 
 export default function Home() {
   return (
@@ -22,11 +23,15 @@ export default function Home() {
         </div>
       </div>
       <Divider />
-      <div className="max-w-4xl w-full mx-auto space-y-4 border-x border-neutral-300 dark:border-neutral-800 p-8">
+      <div className="max-w-4xl w-full mx-auto space-y-4 border-x border-neutral-300 dark:border-neutral-800 p-4 sm:p-8">
         <SocialLinks />
       </div>
       <Divider />
-      <div className="max-w-4xl w-full mx-auto space-y-4 border-x border-neutral-300 dark:border-neutral-800 p-8">
+      <div className="max-w-4xl w-full mx-auto space-y-4 border-x border-neutral-300 dark:border-neutral-800 p-5 sm:p-8">
+        <GitHubContributions username="aryanxvz" />
+      </div>
+      <Divider />
+      <div className="max-w-4xl w-full mx-auto space-y-4 border-x border-neutral-300 dark:border-neutral-800 p-4 sm:p-8">
         <Experience />
       </div>
       <Divider />
