@@ -63,7 +63,7 @@ export function ExperienceItem({experience}: {experience: ExperienceItemType}) {
     <Collapsible defaultOpen={experience.positions[0]?.isExpanded} asChild>
       <div className="mt-4 pt-2 sm:mt-4 hover:bg-neutral-200/30 dark:hover:bg-neutral-900 rounded-lg transition-colors">
         <CollapsibleTrigger className="group/experience not-prose w-full text-left select-none">
-          <div className="flex items-center gap-2 sm:gap-3 px-4">
+          <div className="flex items-center gap-2 sm:gap-3 px-2 sm:px-4">
             <div className="flex size-[48px] sm:size-[60px] shrink-0 items-center justify-center overflow-hidden rounded-full bg-transparent" aria-hidden>
               {experience.companyLogo ? (
                 <Image className="object-cover"

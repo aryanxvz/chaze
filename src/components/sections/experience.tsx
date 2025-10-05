@@ -76,7 +76,7 @@ const WORK_EXPERIENCE: ExperienceItemType[] = [
 export default function Experience() {
   return (
     <section>
-      <div className="text-3xl sm:text-4xl font-bold pl-2 sm:pl-0">
+      <div className="text-3xl sm:text-4xl font-bold pl-1 sm:pl-0">
         <h2>Experience</h2>
       </div>
       <WorkExperience experiences={WORK_EXPERIENCE} />
