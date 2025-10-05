@@ -13,9 +13,9 @@ export default function Home() {
     <main className="max-w-screen overflow-x-hidden px-2">
       <Navbar />
       <div className="mt-60 flex items-center justify-center text-black dark:text-white">
-        <div className="max-w-4xl w-full text-left space-y-4 border-x border-t border-neutral-300 dark:border-neutral-800 p-8">
+        <div className="max-w-4xl w-full text-left space-y-4 border-x border-t border-neutral-300 dark:border-neutral-800 p-5 sm:p-8">
           <ProfileInfo />
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
           {/* <div className="flex items-center justify-center gap-4 mt-4">
             <Github />
             <Github2 />

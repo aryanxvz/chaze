@@ -13,9 +13,9 @@ interface InfoItemProps {
 }
 
 const InfoItem = ({ icon: Icon, children }: InfoItemProps) => (
-  <div className="flex items-center gap-2 text-base">
+  <div className="flex items-center gap-1 sm:gap-2 text-sm sm:text-base">
     <IconContainer>
-      <Icon className="size-4 text-neutral-600 dark:text-neutral-400" />
+      <Icon className="size-3 sm:size-4 text-neutral-600 dark:text-neutral-400" />
     </IconContainer>
     <p>{children}</p>
   </div>
@@ -36,10 +36,10 @@ const Link = ({ href, children, external = true, className = "" }: {
 export default function ProfileInfo() {
   return (
     <>
-      <h1 className="text-6xl font-semibold">Aryan Mane</h1>
-      <div className="text-lg space-y-1">
-        <p>&gt;&nbsp;&nbsp;Software developer, trying to master the art of web.</p>
-        <p>&gt;&nbsp;&nbsp;Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+      <h1 className="text-4xl sm:text-6xl font-semibold">Aryan Mane</h1>
+      <div className="text-base sm:text-lg space-y-1">
+        <p>Software developer, trying to master the art of web.</p>
+        <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
       </div>
 
       <div className="mt-8 space-y-2 text-neutral-600 dark:text-neutral-400">
