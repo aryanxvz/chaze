@@ -7,6 +7,7 @@ import Navbar from "@/components/sections/navbar";
 import SocialLinks from "@/components/sections/socials";
 import Experience from "@/components/sections/experience";
 import GitHubContributions from "@/components/github-chart";
+import Skills from "@/components/sections/skills";
 
 export default function Home() {
   return (
@@ -33,6 +34,10 @@ export default function Home() {
       <Divider />
       <div className="max-w-4xl w-full mx-auto space-y-4 border-x border-neutral-300 dark:border-neutral-800 p-4 sm:p-8">
         <Experience />
+      </div>
+      <Divider />
+      <div className="max-w-4xl w-full mx-auto space-y-4 border-x border-neutral-300 dark:border-neutral-800 p-4 sm:p-8">
+        <Skills />
       </div>
       <Divider />
     </main>
