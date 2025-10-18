@@ -47,8 +47,8 @@ export default function Skills() {
     <section>
       <h2 className="text-3xl sm:text-4xl font-bold pl-1 sm:pl-0">Stack</h2>
 
-      <div className="py-4 pl-1 not-last-of-type:sm:pl-2 [--pattern-foreground:var(--color-neutral-950)]/5 dark:[--pattern-foreground:var(--color-white)]/5 bg-[radial-gradient(var(--pattern-foreground)_1px,transparent_0)] bg-size-[10px_10px] bg-center bg-neutral-950/0.75 dark:bg-white/0.75 contain-layout">
-        <div className="flex flex-wrap gap-4 select-none contain-content">
+      <div className="py-4 pl-1 not-last-of-type:sm:pl-2 [--pattern-foreground:var(--color-neutral-950)]/5 dark:[--pattern-foreground:var(--color-white)]/5 bg-[radial-gradient(var(--pattern-foreground)_1px,transparent_0)] bg-size-[10px_10px] bg-center bg-neutral-950/0.75 dark:bg-white/0.75">
+        <div className="flex flex-wrap gap-4 select-none pb-2">
           {SKILLS.map((skill) => (
             <div key={skill.name} className="flex relative group cursor-pointer">
               {skill.darkIcon ? (
@@ -78,7 +78,7 @@ export default function Skills() {
                 />
               )}
               
-              <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900 text-sm rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10 before:content-[''] before:absolute before:top-full before:left-1/2 before:-translate-x-1/2 before:border-4 before:border-transparent before:border-t-neutral-900 dark:before:border-t-neutral-100">
+              <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900 text-sm rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50 before:content-[''] before:absolute before:top-full before:left-1/2 before:-translate-x-1/2 before:border-4 before:border-transparent before:border-t-neutral-900 before:dark:border-t-neutral-100">
                 {skill.name}
               </div>
             </div>
