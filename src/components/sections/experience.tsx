@@ -4,7 +4,7 @@ const WORK_EXPERIENCE: ExperienceItemType[] = [
   {
     id: "greencard",
     companyName: "Greencard Inc.",
-    companyLogo: "/icons/greencard.jpeg",
+    companyLogo: "/icons/greencard.svg",
     companyWebsite: "https://greencard.inc",
     positions: [
       {
@@ -41,7 +41,7 @@ const WORK_EXPERIENCE: ExperienceItemType[] = [
   {
     id: "skidoo",
     companyName: "Skidoo",
-    companyLogo: "/icons/theskidoo.jpeg",
+    companyLogo: "/icons/theskidoo.svg",
     companyWebsite: "https://theskidoo.com/posts",
     positions: [
       {

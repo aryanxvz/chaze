@@ -68,7 +68,7 @@ export function ExperienceItem({experience}: {experience: ExperienceItemType}) {
               {experience.companyLogo ? (
                 <Image className="object-cover"
                   src={experience.companyLogo} alt={experience.companyName}
-                  width={60} height={60} quality={100}
+                  width={60} height={60}
                 />
               ) : (
                 <span className="flex size-3 rounded-full bg-zinc-300 dark:bg-zinc-600" />

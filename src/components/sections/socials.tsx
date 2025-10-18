@@ -5,28 +5,28 @@ const SocialLinks = () => {
     {
       name: 'LinkedIn',
       username: 'aryanmane',
-      imagePath: '/icons/linkedin.png',
+      imagePath: '/icons/linkedin.svg',
       bgColor: 'bg-blue-600',
       url: 'https://linkedin.com/in/aryanmane',
     },
     {
       name: 'GitHub',
       username: 'aryanxvz',
-      imagePath: '/icons/github.png',
+      imagePath: '/icons/github.svg',
       bgColor: 'bg-neutral-800',
       url: 'https://github.com/aryanxvz',
     },
     {
       name: 'X (Formerly Twitter)',
       username: '@aryanxvz',
-      imagePath: '/icons/x.png',
+      imagePath: '/icons/x.svg',
       bgColor: 'bg-neutral-900',
       url: 'https://x.com/aryanxvz',
     },
     {
       name: 'Instagram',
       username: '@aryanxvz',
-      imagePath: '/icons/instagram.png',
+      imagePath: '/icons/instagram.svg',
       bgColor: 'bg-[#fafafa] dark:bg-[#0a0a0a]',
       url: 'https://instagram.com/aryanxvz',
     }
