@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import React, { memo } from 'react'
 
 type Skill = {
   name: string
@@ -43,51 +42,6 @@ const SKILLS: readonly Skill[] = [
   { name: 'AWS', icon: '/icons/aws.svg', darkIcon: '/icons/aws-dark2.png' }
 ] as const
 
-interface SkillIconProps {
-  skill: Skill
-}
-
-const SkillIcon = memo(({ skill }: SkillIconProps) => {
-  const sizeClass = skill.small ? 'w-7 h-7' : 'w-8.5 h-8.5 md:w-9 md:h-9'
-  
-  return (
-    <div className="flex relative group cursor-pointer">
-      {skill.darkIcon ? (
-        <>
-          <Image 
-            src={skill.icon} alt={skill.name} 
-            width={36} height={36}
-            className={`${sizeClass} dark:hidden`} loading="lazy"
-            draggable={false}
-          />
-          <Image 
-            src={skill.darkIcon} alt={skill.name} 
-            width={36} height={36}
-            className={`${sizeClass} hidden dark:block`} loading="lazy"
-            draggable={false}
-          />
-        </>
-      ) : (
-        <Image 
-          src={skill.icon} alt={skill.name} 
-          width={36} height={36}
-          className={sizeClass} loading="lazy"
-          draggable={false}
-        />
-      )}
-      
-      <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900 text-sm rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10">
-        {skill.name}
-        <div className="absolute top-full left-1/2 -translate-x-1/2 -mt-px">
-          <div className="border-4 border-transparent border-t-neutral-900 dark:border-t-neutral-100" />
-        </div>
-      </div>
-    </div>
-  )
-})
-
-SkillIcon.displayName = 'SkillIcon'
-
 export default function Skills() {
   return (
     <section>
@@ -96,7 +50,39 @@ export default function Skills() {
       <div className="py-4 pl-1 not-last-of-type:sm:pl-2 [--pattern-foreground:var(--color-neutral-950)]/5 dark:[--pattern-foreground:var(--color-white)]/5 bg-[radial-gradient(var(--pattern-foreground)_1px,transparent_0)] bg-size-[10px_10px] bg-center bg-neutral-950/0.75 dark:bg-white/0.75">
         <div className="flex flex-wrap gap-4 select-none">
           {SKILLS.map((skill) => (
-            <SkillIcon key={skill.name} skill={skill} />
+            <div key={skill.name} className="flex relative group cursor-pointer">
+              {skill.darkIcon ? (
+                <>
+                  <Image 
+                    src={skill.icon} alt={skill.name}
+                    width={32} height={32}
+                    className={skill.small ? 'w-7 h-7 dark:hidden' : 'w-8.5 h-8.5 md:w-9 md:h-9 dark:hidden'}
+                    loading="lazy"
+                    draggable={false}
+                  />
+                  <Image 
+                    src={skill.darkIcon} alt={skill.name}
+                    width={32} height={32}
+                    className={skill.small ? 'w-7 h-7 hidden dark:block' : 'w-8.5 h-8.5 md:w-9 md:h-9 hidden dark:block'}
+                    loading="lazy"
+                    draggable={false}
+                  />
+                </>
+              ) : (
+                <Image 
+                  src={skill.icon} alt={skill.name}
+                  width={32} height={32}
+                  className={skill.small ? 'w-7 h-7' : 'w-8.5 h-8.5 md:w-9 md:h-9'}
+                  loading="lazy"
+                  draggable={false}
+                />
+              )}
+              
+              <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900 text-sm rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10">
+                {skill.name}
+                <div className="absolute top-full left-1/2 -translate-x-1/2 -mt-px border-4 border-transparent border-t-neutral-900 dark:border-t-neutral-100" />
+              </div>
+            </div>
           ))}
         </div>
       </div>
