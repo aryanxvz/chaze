@@ -61,7 +61,7 @@ export function WorkExperience({className, experiences}: {className?: string; ex
 export function ExperienceItem({experience}: {experience: ExperienceItemType}) {
   return (
     <Collapsible defaultOpen={experience.positions[0]?.isExpanded} asChild>
-      <div className="mt-4 pt-2 sm:mt-4 hover:bg-neutral-200/30 dark:hover:bg-neutral-900 rounded-lg transition-colors">
+      <div className="mt-4 py-2 sm:mt-4 hover:bg-neutral-200/30 dark:hover:bg-neutral-900 rounded-lg transition-colors">
         <CollapsibleTrigger className="group/experience not-prose w-full text-left select-none">
           <div className="flex items-center gap-2 sm:gap-3 px-2 sm:px-4">
             <div className="flex size-[48px] sm:size-[60px] shrink-0 items-center justify-center overflow-hidden rounded-full bg-transparent" aria-hidden>
@@ -161,7 +161,7 @@ export function ExperiencePositionItem({position}: {position: ExperiencePosition
       )}
 
       {Array.isArray(position.skills) && position.skills.length > 0 && (
-        <ul className="not-prose flex flex-wrap gap-1.5">
+        <ul className="not-prose flex flex-wrap gap-1.5 pb-1 sm:pb-2">
           {position.skills.map((skill, index) => (
             <li key={index} className="flex">
               <Skill>{skill}</Skill>
