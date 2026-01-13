@@ -61,9 +61,9 @@ export function WorkExperience({className, experiences}: {className?: string; ex
 export function ExperienceItem({experience}: {experience: ExperienceItemType}) {
   return (
     <Collapsible defaultOpen={experience.positions[0]?.isExpanded} asChild>
-      <div className="mt-4 py-2 sm:mt-4 hover:bg-neutral-200/30 dark:hover:bg-neutral-900 rounded-lg transition-colors">
+      <div className="mt-4 py-3 sm:mt-4 hover:bg-neutral-200/30 dark:hover:bg-neutral-900 rounded-lg transition-colors duration-200">
         <CollapsibleTrigger className="group/experience not-prose w-full text-left select-none">
-          <div className="flex items-center gap-2 sm:gap-3 px-2 sm:px-4">
+          <div className="flex items-center gap-3 sm:gap-4 px-2 sm:px-4">
             <div className="flex size-[48px] sm:size-[60px] shrink-0 items-center justify-center overflow-hidden rounded-full bg-transparent" aria-hidden>
               {experience.companyLogo ? (
                 <Image className="object-cover"
@@ -77,13 +77,13 @@ export function ExperienceItem({experience}: {experience: ExperienceItemType}) {
 
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2 flex-wrap">
-                <h3 className="text-base sm:text-lg leading-snug font-medium">
+                <h3 className="text-base sm:text-lg leading-snug sm:font-semibold font-medium">
                   {experience.companyName}
                 </h3>
 
                 {experience.companyWebsite && (
                   <a href={experience.companyWebsite} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}
-                    className="inline-flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors mb-0.5" aria-label={`Visit ${experience.companyName} website`}>
+                    className="inline-flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors duration-300 mb-0.5" aria-label={`Visit ${experience.companyName} website`}>
                     <ExternalLinkIcon className="size-4" />
                   </a>
                 )}
@@ -190,7 +190,7 @@ function Skill({ className, ...props }: React.ComponentProps<"span">) {
   return (
     <span
       className={cn(
-        "inline-flex items-center rounded-lg border bg-muted/50 px-1.5 py-[1px] sm:py-0.5 text-xs text-muted-foreground transition-colors hover:bg-muted", className)}
+        "inline-flex items-center rounded-lg border bg-muted/50 px-1.5 py-[1px] sm:py-0.5 text-xs text-muted-foreground transition-colors hover:bg-muted cursor-default", className)}
       {...props}
     />
   )

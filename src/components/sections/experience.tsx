@@ -13,25 +13,26 @@ const WORK_EXPERIENCE: ExperienceItemType[] = [
         employmentPeriod: "04.2025 — present",
         employmentType: "Full-time",
         icon: "code",
-        description: `- Developed the frontend of AI-powered immigration law consultation chatbot using Next.js and TypeScript
-- Engineered modular and accessible UI components with Tailwind CSS, MUI and Framer Motion.
-- Introduced product and web analytics using PostHog to monitor user behavior and improve UX.
-- Implemented secure authentication and role-based authorization flows with Clerk.
-- Built file upload functionality using UploadThing, enabling document parsing and validation.
-- Optimized client-side performance with TanStack Query and dynamic data tables using React Table.
-- Link demo - Registered the e-commerce site with [online.gov.vn](https://online.gov.vn) for compliance.`,
+        description: `- Pioneered frontend architecture and development for an AI immigration legal assistant, defining the technical roadmap and framework
+- Engineered a scalable UI component system using Tailwind and Framer Motion, accelerating new-feature UI development time by over 40% while enforcing accessibility standards
+- Optimized application performance using TanStack Query for optimistic updates and API caching, reducing state management complexity between backend and frontend and slashing load times on data-heavy views by ~35%
+- Established an analytics and instrumentation layer with PostHog, surfacing friction points to enable data-driven UX decisions and improving engagement on key flows
+- Developed secured file upload functionality for legal documents along with document parsing and validation`,
         skills: [
+          "React",
           "Next.js",
-          "Strapi",
-          "Auth0",
-          "VNPAY-QR",
-          "Docker",
-          "NGINX",
-          "Google Cloud",
-          "Docusaurus",
-          "Extension",
-          "Research",
-          "Project Management",
+          "Tailwind",
+          "Radix UI",
+          "Framer Motion",
+          "Recharts",
+          "TanStack Query",
+          "Zustand",
+          "PostgreSQL",
+          "Sanity CMS",
+          "OAuth 2",
+          "Clerk",
+          "Resend",
+          "PostHog",
         ],
         isExpanded: false,
       }
@@ -42,7 +43,7 @@ const WORK_EXPERIENCE: ExperienceItemType[] = [
     id: "skidoo",
     companyName: "Skidoo",
     companyLogo: "/icons/theskidoo.svg",
-    companyWebsite: "https://theskidoo.com/posts",
+    companyWebsite: "https://theskidoo.com/",
     positions: [
       {
         id: "30d3a9fb-021d-452a-9d27-83655369b4b9",
@@ -50,22 +51,25 @@ const WORK_EXPERIENCE: ExperienceItemType[] = [
         employmentPeriod: "01.2024 — 03.2025",
         employmentType: "Full-time",
         icon: "code",
-        description: `- Developed the frontend of AI-powered immigration law consultation chatbot using Next.js and TypeScript
-- Engineered modular and accessible UI components with Tailwind CSS, MUI and Framer Motion.
-- Introduced product and web analytics using PostHog to monitor user behavior and improve UX.
-- Implemented secure authentication and role-based authorization flows with Clerk.
-- Built file upload functionality using UploadThing, enabling document parsing and validation.
-- Optimized client-side performance with TanStack Query and dynamic data tables using React Table.
-- Link demo - Registered the e-commerce site with [online.gov.vn](https://online.gov.vn) for compliance.`,
+        description: `- Drove full-stack development and system design for Skidoo's travel platform, directing architecture decisions across SEO, SSR strategies, page performance, and global responsiveness
+- Architected a modular monorepo with Turborepo, cutting build times by ~30% and enabling efficient shared utilities across projects
+- Devised a CMS content engine using Sanity, empowering non-engineering teams to autonomously update itineraries and travel content without requiring code deployments
+- Implemented secured role-based access control with Clerk, reducing engineering hours spent on building and maintaining authentication by 60%
+- Designed Postgres relational database schemas for core booking, itinerary, and content modules
+- Deployed automated email pipelines with React email and Resend for streamlined itinerary delivery, resulting in reduced operational load`,
         skills: [
+          "React",
           "Next.js",
-          "Strapi",
-          "Auth0",
-          "VNPAY-QR",
-          "Docker",
-          "NGINX",
-          "Extension",
-          "Research",
+          "Tailwind",
+          "Radix UI",
+          "TanStack Query",
+          "PostgreSQL",
+          "Sanity CMS",
+          "OAuth 2",
+          "Clerk",
+          "Turborepo",
+          "Resend",
+          "Google Analytics",
         ],
         isExpanded: false,
       }
