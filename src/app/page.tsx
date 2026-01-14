@@ -45,15 +45,15 @@ export default function Home() {
       </Section>
       <Divider />
       <Section>
+        <Skills />
+      </Section>
+      <Divider />
+      <Section>
         <Experience />
       </Section>
       <Divider />
       <Section>
         <Projects />
-      </Section>
-      <Divider />
-      <Section>
-        <Skills />
       </Section>
       <Divider />
     </main>
