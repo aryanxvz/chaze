@@ -22,7 +22,7 @@ function Section({ children, isFirst }: SectionProps) {
       </div>
     </>
   ) : (
-    <div className="max-w-4xl w-full mx-auto space-y-4 border-x border-neutral-300 dark:border-neutral-800 p-4 sm:p-8">
+    <div className="max-w-4xl w-full mx-auto space-y-4 border-x border-neutral-300 dark:border-neutral-800 p-3 sm:p-8">
       {children}
     </div>
   );
