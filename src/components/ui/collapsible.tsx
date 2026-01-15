@@ -43,3 +43,26 @@ export function ExperienceCollapsible({ defaultOpen, children }: ExperienceColla
     </Collapsible>
   )
 }
+
+// project collapsible
+type ProjectCollapsibleProps = {
+  children: [React.ReactNode, React.ReactNode];
+};
+
+export function ProjectCollapsible({ children }: ProjectCollapsibleProps) {
+  const [header, content] = children;
+  
+  return (
+    <Collapsible>
+      <div className="rounded-lg border-b hover:bg-neutral-200/30 dark:hover:bg-neutral-900 transition-colors">
+        <CollapsibleTrigger className="group w-full text-left select-none">
+          {header}
+        </CollapsibleTrigger>
+
+        <CollapsibleContent className="overflow-hidden transition-all duration-300 ease-out data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down">
+          {content}
+        </CollapsibleContent>
+      </div>
+    </Collapsible>
+  )
+}

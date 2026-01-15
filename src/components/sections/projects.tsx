@@ -1,4 +1,4 @@
-import { ProjectItemType, ProjectsList } from "../ui/my-projects"
+import { ProjectItemType, ProjectsList } from "../ui/projects-list"
 
 const PROJECTS: ProjectItemType[] = [
   {
