@@ -45,7 +45,7 @@ const SKILLS: readonly Skill[] = [
 export default function Skills() {
   return (
     <section>
-      <h2 className="text-3xl sm:text-4xl font-bold pl-1 sm:pl-0">Stack</h2>
+      <h2 className="text-3xl sm:text-4xl font-bold selection:text-white selection:bg-neutral-800 dark:selection:text-black dark:selection:bg-neutral-200 transition-all">Stack</h2>
 
       <div className="py-4 pl-1 not-last-of-type:sm:pl-2 [--pattern-foreground:var(--color-neutral-950)]/5 dark:[--pattern-foreground:var(--color-white)]/5 bg-[radial-gradient(var(--pattern-foreground)_1px,transparent_0)] bg-size-[10px_10px] bg-center bg-neutral-950/0.75 dark:bg-white/0.75">
         <div className="flex flex-wrap gap-4 select-none pb-2">

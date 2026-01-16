@@ -67,7 +67,7 @@ const PROJECTS: ProjectItemType[] = [
 export default function Projects() {
   return (
     <section>
-      <div className="text-3xl sm:text-4xl font-bold mb-4">
+      <div className="text-3xl sm:text-4xl font-bold mb-4 selection:text-white selection:bg-neutral-800 dark:selection:text-black dark:selection:bg-neutral-200 transition-all">
         <h2>Projects</h2>
       </div>
       <ProjectsList projects={PROJECTS} />
