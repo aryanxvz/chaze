@@ -130,3 +130,42 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+/* gitHub calendar selection style */
+.react-activity-calendar svg *::selection {
+  background-color: rgb(38 38 38) !important;
+  fill: rgb(255 255 255) !important;
+  color: rgb(255 255 255) !important;
+}
+.react-activity-calendar svg *::-moz-selection {
+  background-color: rgb(38 38 38) !important;
+  fill: rgb(255 255 255) !important;
+  color: rgb(255 255 255) !important;
+}
+.dark .react-activity-calendar svg *::selection {
+  background-color: rgb(229 229 229) !important;
+  fill: rgb(38 38 38) !important;
+  color: rgb(38 38 38) !important;
+}
+.dark .react-activity-calendar svg *::-moz-selection {
+  background-color: rgb(229 229 229) !important;
+  fill: rgb(38 38 38) !important;
+  color: rgb(38 38 38) !important;
+}
+
+.react-activity-calendar *:not(svg):not(svg *)::selection {
+  background-color: rgb(38 38 38) !important;
+  color: rgb(255 255 255) !important;
+}
+.react-activity-calendar *:not(svg):not(svg *)::-moz-selection {
+  background-color: rgb(38 38 38) !important;
+  color: rgb(255 255 255) !important;
+}
+.dark .react-activity-calendar *:not(svg):not(svg *)::selection {
+  background-color: rgb(229 229 229) !important;
+  color: rgb(38 38 38) !important;
+}
+.dark .react-activity-calendar *:not(svg):not(svg *)::-moz-selection {
+  background-color: rgb(229 229 229) !important;
+  color: rgb(38 38 38) !important;
+}
