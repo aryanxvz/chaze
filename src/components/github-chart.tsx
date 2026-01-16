@@ -43,7 +43,7 @@ export default function GitHubContributions({ username = 'your-username' }) {
   const isDark = resolvedTheme === 'dark'
 
   return (
-    <div className="w-full max-w-4xl mx-auto">
+    <div className="w-full max-w-4xl mx-auto selection:text-white selection:bg-neutral-800 dark:selection:text-black dark:selection:bg-neutral-200 transition-all">
       <div className="overflow-x-auto -mx-2 px-2">
         <div className="min-w-max">
           <GitHubCalendar username={username}
@@ -76,7 +76,8 @@ export default function GitHubContributions({ username = 'your-username' }) {
         </div>
       </div>
       <Tooltip id="github-tooltip" 
-        className="!bg-neutral-800 dark:!bg-neutral-900 !text-white !text-sm !rounded-md !px-3 !py-2" style={{ zIndex: 1000 }}
+      className="!bg-neutral-800 dark:!bg-neutral-900 !text-white !text-sm !rounded-md !px-3 !py-2 selection:text-white selection:bg-neutral-800 dark:selection:text-black dark:selection:bg-neutral-200 transition-all" 
+      style={{ zIndex: 1000 }}
       />
     </div>
   )
