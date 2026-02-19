@@ -59,7 +59,7 @@ const SocialLinks = () => {
           <div className="grid grid-cols-2 gap-4 mb-4">
             {links.slice(0, 2).map((link, index) => (
               <a key={index} href={link.url} target="_blank" rel="noopener noreferrer"
-                className="bg-[#fafafa] dark:bg-[#0a0a0a] hover:bg-neutral-100 hover:dark:bg-neutral-950 border border-neutral-300 dark:border-neutral-700 hover:border-neutral-400 dark:hover:border-neutral-600 p-5 flex items-center justify-between transition-all duration-200 cursor-pointer group">
+                className="bg-[#fafafa] dark:bg-[#0a0a0a] hover:bg-neutral-100 hover:dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 hover:border-neutral-400 dark:hover:border-neutral-600 p-5 flex items-center justify-between transition-all duration-200 cursor-pointer group">
                 <div className="flex items-center justify-center space-x-4">
                   <div className={`w-12 h-12 rounded-xl flex items-center justify-center relative bg-gradient-to-br from-white via-neutral-300/40 to-white dark:from-white/60 dark:via-neutral-600 dark:to-white/60 p-[0.5px]`}>
                     <div className={`w-full h-full ${link.bgColor} rounded-[11px] group-hover:rounded-[10px] flex items-center justify-center overflow-hidden transition-all duration-300 ease-in-out`}>
@@ -89,8 +89,7 @@ const SocialLinks = () => {
           <div className="grid grid-cols-2 gap-4">
             {links.slice(2, 4).map((link, index) => (
               <a key={index + 2} href={link.url} target="_blank" rel="noopener noreferrer"
-                className="bg-[#fafafa] dark:bg-[#0a0a0a] border border-neutral-300 dark:border-neutral-700 hover:border-neutral-400 dark:hover:border-neutral-600 p-5 flex items-center justify-between transition-all duration-200 cursor-pointer group"
-              >
+                className="bg-[#fafafa] dark:bg-[#0a0a0a] hover:bg-neutral-100 hover:dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 hover:border-neutral-400 dark:hover:border-neutral-600 p-5 flex items-center justify-between transition-all duration-200 cursor-pointer group">
                 <div className="flex items-center space-x-4">
                   <div className={`w-12 h-12 rounded-xl flex items-center justify-center relative p-[0.5px] bg-gradient-to-br from-white via-neutral-300/40 to-white dark:from-white/60 dark:via-neutral-900 dark:to-white/60`}>
                     <div className={`w-full h-full ${link.bgColor} rounded-xl flex items-center justify-center overflow-hidden`}>
